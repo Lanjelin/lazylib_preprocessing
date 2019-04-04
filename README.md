@@ -9,10 +9,8 @@ Autmatic updating IDv1 and IDv2 tags on mp3-files for LazyLibrarian to allow dir
 
 #### What does it do?
 * Fix broken IDv tags
+* Set IDv-tag title as book title and file of total
 * Set IDv-tag artist as book author
 * Set IDv-tag album as book title
-
-#### What needs to be done
-* Set IDv-tag title as book title and file number (?)
 * Set IDv-tag track as file number
-* Installing instructions ?
+
