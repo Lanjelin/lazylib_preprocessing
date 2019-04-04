@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*- 
 import os, subprocess, sys
 
-# should we sort and set track number?
 def getFiles(path):
 	files = []
 	# r=root, d=directories, f = files
