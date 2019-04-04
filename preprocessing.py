@@ -2,23 +2,26 @@
 import os, subprocess, sys
 
 def getFiles(path):
-	files = []
-	# r=root, d=directories, f = files
-	for r, d, f in os.walk(path):
-	    for file in f:
-	        if '.mp3' in file:
-	            files.append(os.path.join(r, file))
-	return files
+    files = []
+    # r=root, d=directories, f = files
+    for r, d, f in os.walk(path):
+        for file in f:
+            if '.mp3' in file:
+                files.append(os.path.join(r, file))
+    return files
 
 def fixTags(files,author,book):
-	for file in files:
-		subprocess.call([
+    part = 0
+    total = len(files)
+    for file in sorted(files):
+        part += 1
+        subprocess.call([
           'kid3-cli',
-          '-c', 'set title ""',
+          '-c', 'set title "'+book+' Part '+str(part)+' of '+str(total)+'"',
           '-c', 'set artist "'+author+'"',
           '-c', 'set album "'+book+'"',
           '-c', 'set song ""',
-          '-c', 'set track ""',
+          '-c', 'set track "'+str(part)+'"',
           '-c', 'set comment ""',
           '-c', 'set year ""',
           '-c', 'set genre "183"',
