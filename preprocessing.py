@@ -34,13 +34,13 @@ authorname = ''
 bookname = ''
 if sys.argv[1] == 'test':
     if '.py' in subprocess.check_output(['kid3-cli','-c', 'ls']):
-    	print 'preprocessing.py sucessfully installed'
+        print 'preprocessing.py sucessfully installed'
     else:
-    	print 'kid3-cli seems to be missing'
+        print 'kid3-cli seems to be missing'
 else:
     booktype = sys.argv[1]
     bookfolder = sys.argv[2]
     if len(sys.argv) == 5:
         authorname = sys.argv[3]
         bookname = sys.argv[4]
-	fixTags(getFiles(bookfolder),authorname,bookname)
+    fixTags(getFiles(bookfolder),authorname,bookname)
