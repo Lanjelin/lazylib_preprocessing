@@ -1,5 +1,5 @@
 # lazylib_preprocessing
-Autmatic updating IDv1 and IDv2 tags on mp3-files for LazyLibrarian to allow direct import to Plex
+Automatically updating of IDv1 and IDv2 tags on mp3-files for LazyLibrarian to allow direct import to Plex
 
 #### Requirements
 * [kid3-cli](https://kid3.sourceforge.io/), needs to be added to path
