@@ -17,7 +17,9 @@ def fixTags(files,author,book):
         part += 1
         subprocess.call([
           'kid3-cli',
-          '-c', 'set title "'+book+' Part '+str(part)+' of '+str(total)+'"',
+          '-c', 'remove "2"',
+          '-c', 'tag "2"',
+          '-c', 'set title "Part '+str(part)+' of '+str(total)+'"',
           '-c', 'set artist "'+author+'"',
           '-c', 'set album "'+book+'"',
           '-c', 'set song ""',
